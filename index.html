@@ -115,8 +115,20 @@ function moveBugs()
         bug.object.style.top  = y + "px";
     }
 }
-
+function loadImage() {
+    alert("Image is loaded");
+}
 </script>
+<style type="text/css">
+img.bug {
+    position: absolute;
+    z-index: 99;
+    height: auto;
+    width: 15%;
+    border-radius: 50%;
+}
+</style>
+
 <!------
 <style type="text/css">
 img.bug {
@@ -319,7 +331,8 @@ img.bug {
       </div>
     </section>
 
-    <section onload="startBugs()" onresize="setLimits()">
+    <section class="2nd-video">
+
       <h2 class="overlay-1">prayer request</h2>
       <video class="background-video-1" src="resources/nature-landscapes.mov" autoplay loop>
   Video not supported on this browser.
@@ -327,10 +340,10 @@ img.bug {
     <div class="row">
       <figure  class="bug-figure">
         <a href="https://www.biblegateway.com/" target="-_blank">
-          <img class="bug" id="bug0" src="resources/jpg/1corinthians-slide.jpg" alt="buggy0" /></a>
+          <img class="bug" id="bug0" onload="startBugs()" onresize="setLimits()" src="resources/jpg/1corinthians-slide.jpg" alt="buggy0" /></a>
       </figure>
       <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug1" src="resources/jpg/2014-10-02-blackmotherchildhomeless3.jpg" alt="buggy1" /></a>
+        <a href="#"><img class="bug" id="bug1" onload="startBugs()" onresize="setLimits()" src="resources/jpg/2014-10-02-blackmotherchildhomeless3.jpg" alt="buggy1" /></a>
       </figure>
       <figure>
         <a href="#"><img class="bug" id="bug2" src="resources/jpg/1363373.jpg" alt="buggy2" /></a>

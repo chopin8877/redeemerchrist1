@@ -629,10 +629,20 @@ footer p{
 }
 
 /*  2nd video*/
-img.bug {
+/* img.bug {
     position: absolute;
     z-index: 99;
     height: auto;
     width: 15%;
     border-radius: 50%;
+}*/
+.second-video {
+  width: 100%;
+}
+.second-video img {
+  position: absolute;
+  z-index: 99;
+  height: auto;
+  width: 15%;
+  border-radius: 50%;
 }
