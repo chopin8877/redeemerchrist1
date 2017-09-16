@@ -1,9 +1,7 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- abover after ... PUBLIC from flowing multiple images----->
 <html lang="en">
-<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta name="viewport" content="width=divice-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
@@ -15,121 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Homemade+Apple|Rock+Salt" rel="stylesheet">
 
 
-    <title>Redeemerchrist1</title>
-    <!---------- 2nd video---------------->
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-    <meta charset="utf-8" />
-    <script type="text/javascript">
-// control speed, etc., with these.  Treated as constants:
-var INTERVAL = 50;
-var MAXSPEED = 3;
-var MAXDURATION = 9999;
-
-// The maximal screen positions allowed (0,0 implied as minimal):
-var xmax = 0;
-var ymax = 0;
-
-// constructor for one "Bug" object:
-function Bug( obj, x,y,dx,dy,t )
-{
-    this.object   = obj;
-    this.xpos     = x;
-    this.ypos     = y;
-    this.xspeed   = dx;
-    this.yspeed   = dy;
-    this.duration = t;
-}
-
-// the master array controlling everything:
-var Bugs = [];
-
-// if the page is resized, reset the limits
-function setLimits( )
-{
-    xmax = document.documentElement.clientWidth - 48;
-    ymax = document.documentElement.clientHeight - 48;
-}
-
-
-// called when the page is loaded...sets up all the bugs
-function startBugs( )
-{
-
-    setLimits(); // on startup, same as a resize
-    // handles any number of bugs, up to 9999
-    for ( var bugnum = 0; bugnum < 9999; ++bugnum )
-    {
-        // find one
-        var bugimg = document.getElementById("bug"+bugnum);
-
-        if ( bugimg == null )break; // but stop when no more to be found
-
-        // put this bug, with its initial info, into the array:
-        Bugs[bugnum] =
-            new Bug( bugimg,
-                     // random starting position
-                     Math.floor(Math.random() * xmax),
-                     Math.floor(Math.random() * ymax),
-                     // and random starting speed
-                     Math.floor(Math.random() * 2 * MAXSPEED) - MAXSPEED,
-                     Math.floor(Math.random() * 2 * MAXSPEED) - MAXSPEED,
-                     // and random duration
-                     Math.floor(Math.random() * MAXDURATION)
-                   );
-    }
-    // the "tick" time
-    setInterval( moveBugs, INTERVAL );
-    // and the first movement...which actually moves bugs to starting positions
-    moveBugs();
-}
-
-
-// called each "tick"
-function moveBugs()
-{
-    // process all moving objects:
-    for ( var bugnum = 0; bugnum < Bugs.length; ++bugnum )
-    {
-        var bug = Bugs[bugnum];
-        // find new position
-        var x = bug.xpos + bug.xspeed;
-        var y = bug.ypos + bug.yspeed;
-
-        // don't allow position to be out of bounds
-
-
-
-        // the key to the whole thing...
-        // if the object is *at* any boundary *OR* if duration has expired for this movement...
-        if ( x==0 || x==xmax || y==0 || y==ymax || --bug.duration <= 0)
-        {
-            // then get new random speed (both x and y) and duration
-            bug.xspeed   = Math.floor(Math.random() * 2 * MAXSPEED) - MAXSPEED;
-            bug.yspeed   = Math.floor(Math.random() * 2 * MAXSPEED) - MAXSPEED;
-            bug.duration = Math.floor(Math.random() * MAXDURATION);
-        }
-        // finally, store the position back in array...
-        bug.xpos = x; bug.ypos = y;
-        // and move the object
-        bug.object.style.left = x + "px";
-        bug.object.style.top  = y + "px";
-    }
-}
-
-</script>
-<!------
-<style type="text/css">
-img.bug {
-    position: absolute;
-    z-index: 99;
-    height: auto;
-    width: 15%;
-    border-radius: 50%;
-}
-
-</style>
------------------>
-
+    <title>Redeemerchrist2</title>
   </head>
   <body>
     <center>
@@ -319,73 +203,11 @@ img.bug {
       </div>
     </section>
 
-    <section onload="startBugs()" onresize="setLimits()">
+    <section>
       <h2 class="overlay-1">prayer request</h2>
       <video class="background-video-1" src="resources/nature-landscapes.mov" autoplay loop>
   Video not supported on this browser.
     </video>
-    <div class="row">
-      <figure  class="bug-figure">
-        <a href="https://www.biblegateway.com/" target="-_blank">
-          <img class="bug" id="bug0" src="resources/jpg/1corinthians-slide.jpg" alt="buggy0" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug1" src="resources/jpg/2014-10-02-blackmotherchildhomeless3.jpg" alt="buggy1" /></a>
-      </figure>
-      <figure>
-        <a href="#"><img class="bug" id="bug2" src="resources/jpg/1363373.jpg" alt="buggy2" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug3" src="resources/jpg/attachment.php.jpg" alt="buggy3" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug4" src="resources/jpg/bigstock-Praying-Hands-On-An-Open-Bible-3407461.jpg" alt="buggy4" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug5" src="resources/jpg/Contrast.jpg" alt="buggy5" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug6" src="resources/jpg/Gan Style.jpg" alt="buggy6" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug7" src="resources/jpg/green-nature-wallpaper-1.jpg" alt="buggy7" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug8" src="resources/jpg/handinhand.jpg" alt="buggy8" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug9" src="resources/jpg/homeless4.jpg" alt="buggy9" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug10" src="resources/jpg/homeless5.jpg" alt="buggy10" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug11" src="resources/jpg/homeless6.jpg" alt="buggy11" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug12" src="resources/jpg/INNER_BEAUTY-INNER.jpg" alt="buggy12" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug13" src="resources/jpg/inner-beauty.jpg" alt="buggy13" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug14" src="resources/jpg/Peter-Marquie-Homeless-in-NYC-0600-October-01-2015-800x533.jpg" alt="buggy14" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug15" src="resources/jpg/reading-bible_2316_1024x805.jpg" alt="buggy15" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug16" src="resources/jpg/soldier-dog-companion-service.jpg" alt="buggy16" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug17" src="resources/jpg/test 1.jpg" alt="buggy17" /></a>
-      </figure>
-      <figure class="bug-figure">
-        <a href="#"><img class="bug" id="bug18" src="resources/jpg/test 2.jpg" alt="buggy18" /></a>
-      </figure>
-
-    </div>
-
     </section>
 
     <section class="section-cities">
@@ -665,42 +487,8 @@ img.bug {
 
 
 </html>
-<!---------
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/vidbkgrnd.css">
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Homemade+Apple|Rock+Salt" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Rock+Salt" rel="stylesheet">
-    <title>redeemerchrist1</title>
-  </head>
-  <body>
-    <center>
-
-        <h1 class="overlay"><a href="#">REDEEMER<br />CHRIST</a></h1>
-        <video class="background-video" src="resources/movingclouds.mov" autoplay loop>
-    Video not supported on this browser.
-      </video>
-    </center>
-
-    <header>
-
-      <div class="hero-text-box">
-         <h1>come to me,<br> all you who are weary and burdened, and I will give you rest.
-         </h1>
-         <a class="btn btn-full"href="#">COMPOSITION</a>
-         <a class="btn btn-ghost"href="#">TESTIMONY</a>
-       </div>
-    </header>
-    <section class="section-fectures">
-
-</section>
-
-  </body>
+<!---
 
 
-</html>
----------->
+
+    ------>

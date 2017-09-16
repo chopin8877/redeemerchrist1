@@ -628,11 +628,4 @@ footer p{
   margin-top: 20px;
 }
 
-/*  2nd video*/
-img.bug {
-    position: absolute;
-    z-index: 99;
-    height: auto;
-    width: 15%;
-    border-radius: 50%;
 }
