@@ -44,11 +44,14 @@ function Bug( obj, x,y,dx,dy,t )
 var Bugs = [];
 
 // if the page is resized, reset the limits
+
 function setLimits( )
 {
     xmax = document.documentElement.clientWidth - 48;
     ymax = document.documentElement.clientHeight - 48;
 }
+
+
 
 
 // called when the page is loaded...sets up all the bugs
@@ -118,16 +121,13 @@ function moveBugs()
 function loadImage() {
     alert("Image is loaded");
 }
+
+
+
 </script>
-<style type="text/css">
-img.bug {
-    position: absolute;
-    z-index: 99;
-    height: auto;
-    width: 15%;
-    border-radius: 50%;
-}
-</style>
+
+
+
 
 <!------
 <style type="text/css">
@@ -331,7 +331,7 @@ img.bug {
       </div>
     </section>
 
-    <section class="2nd-video">
+    <section class="second-video" >
 
       <h2 class="overlay-1">prayer request</h2>
       <video class="background-video-1" src="resources/nature-landscapes.mov" autoplay loop>
@@ -679,41 +679,5 @@ img.bug {
 
 </html>
 <!---------
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/vidbkgrnd.css">
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Homemade+Apple|Rock+Salt" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Rock+Salt" rel="stylesheet">
-    <title>redeemerchrist1</title>
-  </head>
-  <body>
-    <center>
 
-        <h1 class="overlay"><a href="#">REDEEMER<br />CHRIST</a></h1>
-        <video class="background-video" src="resources/movingclouds.mov" autoplay loop>
-    Video not supported on this browser.
-      </video>
-    </center>
-
-    <header>
-
-      <div class="hero-text-box">
-         <h1>come to me,<br> all you who are weary and burdened, and I will give you rest.
-         </h1>
-         <a class="btn btn-full"href="#">COMPOSITION</a>
-         <a class="btn btn-ghost"href="#">TESTIMONY</a>
-       </div>
-    </header>
-    <section class="section-fectures">
-
-</section>
-
-  </body>
-
-
-</html>
 ---------->
